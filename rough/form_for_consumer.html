@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>FORM FOR SIGN UP</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>SIGN UP FOR NEW USER </h1>
+    <div class="container">
+        <form>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+
+              <div class="form-outline">
+                  <label class="form-label" for="firstName">First Name</label>
+                <input type="text" id="firstName" class="form-control form-control-lg" name="firstname" Required />
+              </div>
+
+            </div>
+            <div class="col-md-6 mb-4">
+
+              <div class="form-outline">
+              <label class="form-label" for="lastName">Last Name</label>
+                <input type="text" id="lastName" class="form-control form-control-lg" name="lastname" Required/>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-4 d-flex align-items-center">
+
+              <div class="form-outline datepicker w-100">
+                  <label for="birthdayDate" class="form-label">DATE OF BIRTH</label>
+                <input type="text" class="form-control form-control-lg" id="dob" name="dob"  placeholder="YYYY-MM-DD" Required>
+              </div>
+
+            </div>
+            <div class="col-md-6 mb-4">
+            <div class="form-outline">
+                  <label class="form-label" for="gender">Gender</label>
+                  <select class="form-select" aria-label="Default select example" name="gender" Required>
+                  <option selected></option>
+                         <option value="M">M</option>
+                         <option value="F">F</option>
+                         <option value="O">O</option>
+                  </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-4 pb-2">
+
+              <div class="form-outline">
+                  <label class="form-label" for="emailAddress">Email</label>
+                <input type="email" id="emailAddress" class="form-control form-control-lg" name="email" Required />
+              </div>
+              <div class="form-outline">
+                  <label class="form-label" for="emailAddress">Password</label>
+                <input type="password" id="password" class="form-control form-control-lg" name="password" Required/>
+              </div>
+              <div class="form-outline">
+                  <label class="form-label" for="emailAddress">confirm password</label>
+                <input type="password" id="confirmpassword" class="form-control form-control-lg" name="cpassword" Required />
+              </div>
+            </div>
+            <div class="col-md-6 mb-4 pb-2">
+              <div class="form-outline">
+                  <label class="form-label" for="phoneNumber">Phone Number</label>
+                <input type="number" id="phoneNumber" class="form-control form-control-lg" name="phone" Required />
+              </div>
+            </div>
+          </div>
+         <div class="form-group row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-10">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1" required>
+        <label class="form-check-label" for="gridCheck1"required>
+          I hereby declare that i am a consumer and the above mentioned datas are correct and to the best of my knowledge if any violation have occured then i will sololy responsible for that 
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-10">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1" required>
+        <label class="form-check-label" for="gridCheck1"required>
+          I hereby declare that i trust the author and i accept all the <a href="#">TERMS AND CONDITIONS </a> of the site 
+        </label>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h5>
+        if already have an account then donot sign up again proceed to <a href="login.html">login</a>. 
+    </h5>
+  </div>
+          <div class="mt-4 pt-2">
+            <input class="btn btn-success btn-lg" type="submit" value="Submit" />
+          </div>
+        </form>
+    </div>
+    
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Farmer Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .dashboard-container {
+            max-width: 800px;
+            margin: 5% auto; /* Updated margin top and centered horizontally */
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+            background-color: #f8f9fa;
+            border-bottom: none;
+        }
+        .card-body {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard-container">
+            <h2>Farmer Dashboard</h2>
+            <img src="Photo_navbar.jpeg" class="profile-image" alt="Profile Image">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>first name: John </h4>
+                    <h4>last name:  Doe</h4>
+                    <h5>Contact: 1234567890</h5>
+                    <h5>Email: johndoe@example.com</h5>
+                    <h5>District: Boudh</h5>
+                    <h5>pin: 344</h5>
+                    <h5>area: fgg</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="upload_crop.php" class="btn btn-primary">Upload Crop</a>
+                </div>
+                <div class="col-md-6">
+                    <a href="my_orders.php" class="btn btn-primary">My Orders</a>
+                </div>
+            </div>
+            
+            <!-- Additional buttons -->
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <a href="logout.php" class="btn btn-danger">Logout</a>
+                </div>
+                <div class="col-md-6">
+                    <a href="all_orders.php" class="btn btn-primary">All Orders</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Order Statistics</h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="orderChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4"></script>
+    <script>
+        // Generate random data for the chart
+        var totalOrders = Math.floor(Math.random() * 100);
+        var pendingOrders = Math.floor(Math.random() * totalOrders);
+        var completedOrders = totalOrders - pendingOrders;
+
+        // Create the chart
+        var ctx = document.getElementById('orderChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Total Orders', 'Pending Orders', 'Completed Orders'],
+                datasets: [{
+                    data: [totalOrders, pendingOrders, completedOrders],
+                    backgroundColor: ['#007bff', '#ffc107', '#28a745'],
+                }]
+            },
+            options: {
+                legend: { display: false },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            stepSize: 10
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+</body>
+</html>
